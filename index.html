@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Свадьба Никиты и Яны</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Pacifico&display=swap" rel="stylesheet">
+    <script src="./index.js" defer></script>
+    <style>
+        body {
+            font-family: "Pacifico", sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #FAF3EC;
+            color: #333;
+            text-align: center;
+        }
+
+        .hero {
+            height: 100vh;
+            width: 100%;
+            background: url('./public/icons/photo_2025-03-01_19-50-18\ 1.png') no-repeat center;
+            background-size: contain;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            flex-direction: column;
+            color: #000;
+            text-transform: uppercase;
+        }
+
+        .hero-content {  
+            font-weight: 300;
+            font-style: normal;
+            font-style: italic;
+            background-color: #FFE8DBB2;
+            margin-bottom: 30px;
+            padding: 10px 20px;
+        }
+    
+        .intro, .venue, .dress-code, .schedule, .rsvp {
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .venue img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .dress-code-colors {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .dress-code-img-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 15px 15px;
+        }
+
+        .color {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .schedule ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .schedule li {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .dress-code-img {
+            width: 89px;
+            height: 102px;
+        }
+
+        .dress-code-wrap {
+            display: flex;
+        }
+
+        form {
+            display: flex;
+            align-items: start;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #FEE0C8;
+            border-radius: 5px;
+        }
+
+        form > input {
+            border: none;              
+            border-bottom: 2px solid #000; 
+            outline: none;               
+            padding: 5px 0;              
+            font-size: 16px;
+            background: none;
+            width: 90%;
+            padding-left: 10px;
+        }
+
+        button {
+            background:#FEE0C8;
+            border: none;
+            cursor: pointer;
+        }
+
+        footer {
+            height: 500px;
+            background-image: url("./public/icons/footet_img.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+                /* Скрыть стандартные радиокнопки */
+        .custom-radio input[type="radio"] {
+            display: none;
+        }
+
+        /* Создаем стиль для "чекбокса" */
+        .custom-radio label {
+            position: relative;
+            padding-left: 30px; /* Добавляем отступ для "чекбокса" */
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .custom-radio label::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            border: 2px solid #333;
+            border-radius: 3px; /* Округляем углы */
+            background-color: #fff;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        /* При активации радиокнопки стилизуем метку */
+        .custom-radio input[type="radio"]:checked + label::before {
+            background-color: #4CAF50; /* Цвет фона при выборе */
+            border-color: #4CAF50; /* Цвет границы */
+        }
+
+        /* Когда радиокнопка выбрана, показываем галочку */
+        .custom-radio input[type="radio"]:checked + label::after {
+            content: '✔';
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 16px;
+            color: white;
+        }
+
+
+        @media (max-width: 768px) {
+            .hero {
+                height: 60vh;
+                background-size: cover;
+                
+            }
+
+            footer {
+                background-size: cover;
+            }
+
+            .venue img {
+                width: 100%;
+            }
+            .intro, .venue, .dress-code, .schedule, .rsvp {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>НИКИТА И ЯНА</h1>
+            <p>20 июня 2025</p>
+        </div>
+    </section>
+
+    <section class="intro">
+        <h2>Дорогие гости!</h2>
+        <p>В нашей жизни скоро состоится важное событие – наша свадьба! Мы с удовольствием хотим разделить этот день с вами.</p>
+    </section>
+
+    <section class="venue">
+        <p>Наш праздник пройдет в банкетном зале "МИРАНД" по адресу: Бехтерева 10</p>
+        <img src="./public/icons/banket_zal.png" alt="Банкетный зал">
+    </section>
+
+    <section class="dress-code">
+        <h2>Дресс-код</h2>
+        <div class="dress-code-wrap">
+        <div class="dress-code-img-wrap">
+            <img class="dress-code-img" style="width:80px, height= 100px;" src="./public/icons/dress1.png" alt="">
+            <img class="dress-code-img" style="width:80px, height= 100px;" src="./public/icons/dress2.png" alt="">
+            <img class="dress-code-img" src="./public/icons/dress3.png" alt="">
+            <img class="dress-code-img" src="./public/icons/dress4.png" alt="">
+            <img class="dress-code-img" src="./public/icons/dress5.png" alt="">
+        </div>
+        <div class="dress-code-colors">
+            <div class="color" style="background: #E8D7C5;"></div>
+            <div class="color" style="background: #D5C4B1;"></div>
+            <div class="color" style="background: #A6A29E;"></div>
+            <div class="color" style="background: #6D6C6A;"></div>
+            <div class="color" style="background: #000;"></div>
+        </div>
+        </div>
+    </section>
+
+    <section class="schedule">
+        <h2>Программа дня</h2>
+        <ul>
+            <li><strong>16:00 - Сбор гостей</strong> – просим взять с собой хорошее настроение!</li>
+            <li><strong>16:30 - Церемония</strong> – вы станете свидетелями трогательного момента.</li>
+            <li><strong>17:00 - Торжество</strong> – время вкусной еды, танцев и развлечений.</li>
+        </ul>
+    </section>
+
+    <section class="rsvp">
+        <h2>Анкета</h2>
+        <p>Будем очень признательны, если вы сообщите нам о своем решении до 10.05.25</p>
+        <form id="rsvpForm">
+            <label for="name">Имя и фамилия:</label>
+            <input type="text" id="name" required>
+            
+            <label>Планируете ли вы присутствовать?</label>
+                <div class="custom-radio">
+                    <input type="radio" name="attendance" id="yes" value="yes" required>
+                    <label for="yes">Да</label>
+                </div>
+                <div class="custom-radio">
+                    <input type="radio" name="attendance" id="no" value="no" required>
+                    <label for="no">Нет</label>
+                </div>
+            <button type="submit" >Отправить</button>
+        </form>
+    </section>
+
+    <footer/>
+</body>
+</html>
