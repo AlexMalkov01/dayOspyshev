@@ -7,9 +7,9 @@ document.getElementById('rsvpForm').addEventListener('submit', function(event) {
     var message = `Свадьба 20.06.2025\nЧеловек: ${name}\nПрисутствие: ${attendance === 'yes' ? 'Да' : 'Нет'}`;
 
     // Ваш токен бота
-    var token = '7547335538:AAH6EkuQ0T0sQ0Oy_aM868Vnj6JXvfu2e44'; // Замените на свой токен
+    var token = '7776002140:AAHiDsgq41zeK6cEY9y7Dzl0F9ZEFvxrR_k'; // Замените на свой токен
     // Ваш chat_id (например, @username или chat_id)
-    var chatId = '556280275'; // Замените на свой chat_id или username
+    var chatId = '804088155'; // Замените на свой chat_id или username
 
     var url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
 
