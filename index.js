@@ -1,6 +1,6 @@
 document.getElementById('rsvpForm').addEventListener('submit', function(event) {
     event.preventDefault();
-
+    window.location.href = "index2.html"
     var name = document.getElementById('name').value;
     var attendance = document.querySelector('input[name="attendance"]:checked').value;
 
@@ -22,3 +22,8 @@ document.getElementById('rsvpForm').addEventListener('submit', function(event) {
             alert('Ошибка: ' + error);
         });
 });
+
+function goToNewPage() {
+    window.location.href = "index.html";
+    return false; 
+}
