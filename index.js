@@ -21,10 +21,10 @@ document.getElementById('rsvpForm').addEventListener('submit', function(event) {
             alert('Ошибка: ' + error);
         })
         .finally(()=> {
-            window.location.href = "./index2.html"
+            window.location.href = "/index2.html"
         })
 });
 
 function goToNewPage() {
-    window.location.href = "./index.html";
+    window.location.href = "/index.html";
 }
